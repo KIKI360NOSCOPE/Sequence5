@@ -88,11 +88,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 35
   },
   txt: {
-    color: 'red',
+    color: 'black',
     fontSize: 20,
     borderColor: 'black',
+    paddingLeft: 10,
+    paddingRight: 10,
   },
   roverStyle: {
     flex: 1,
@@ -135,4 +138,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default tp;
+export default Exo4;
