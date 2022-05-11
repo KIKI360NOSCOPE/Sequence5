@@ -96,6 +96,9 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     paddingLeft: 10,
     paddingRight: 10,
+    marginBottom: 10,
+    marginTop: 10,
+    textAlign: 'justify'
   },
   roverStyle: {
     flex: 1,
