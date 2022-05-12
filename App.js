@@ -58,7 +58,6 @@ const Exo5 = () => {
 
 const tp = () => {
   return (
-    /* From the tp.json file, display the information based */
     <View style={{ flex: 1, flexDirection: 'row', marginTop: 35 }}>
       <FlatList
         data={tpList}
@@ -79,7 +78,23 @@ const tp = () => {
   );
 }
 
-
+const TP = () => {
+  const data = require('./tp.json');
+  return (
+    <View style={{ flex: 1 }}>
+      {data.map((element) => (
+       /* affiché les info dans la console */
+        console.table(element),
+        <View style={{ flex: 1, flexDirection: 'row' }}>
+          <View style={{ flex: 2 }}>
+            <Image source={{ uri: element.img }} style={styles.itemImg} />
+          </View>
+        </View>
+      ))
+      }
+    </View>
+  );
+}
 
 
 const styles = StyleSheet.create({
@@ -109,6 +124,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   button: {
+    elevation: 5,
     borderColor: 'black',
     borderWidth: 2,
     borderRadius: 15,
@@ -141,4 +157,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Exo4;
+export default TP;
