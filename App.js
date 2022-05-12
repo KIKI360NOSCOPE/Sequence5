@@ -81,18 +81,22 @@ const tp = () => {
 const TP = () => {
   const data = require('./tp.json');
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView style={{ flex: 1 }}>
       {data.map((element) => (
-       /* affiché les info dans la console */
+        /* affiché les info dans la console */
         console.table(element),
-        <View style={{ flex: 1, flexDirection: 'row' }}>
+        <View style={{ flex: 1, flexDirection: 'row', marginVertical: 5 }}>
           <View style={{ flex: 2 }}>
-            <Image source={{ uri: element.img }} style={styles.itemImg} />
+            <Image source={{ uri: element.img }} style={styles.img} />
+          </View>
+          <View style={{ flex: 2 }}>
+            <Text style={{ fontSize: 20 }}>{element.title}</Text>
+            <Text style={{ fontSize: 15 }}>{element.desc}</Text>
           </View>
         </View>
       ))
       }
-    </View>
+    </ScrollView>
   );
 }
 
@@ -152,6 +156,12 @@ const styles = StyleSheet.create({
     width: '75%',
     height: '75%',
     margin: 10,
+  },
+  img: {
+    width: '100%',
+    height: 300,
+    borderColor: 'black',
+    borderWidth: 2,
   },
 
 
